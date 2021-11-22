@@ -1,0 +1,139 @@
+
+@media (max-width: 576px) { 
+    .bg__slider-content,
+    .bg__news-content{
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .bg__slider-content div,
+    .bg__news-content div{
+        border-radius: 0;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .gallery{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .gallery div{
+        height: 320px;
+    }
+
+
+    .avone{
+        grid-template-columns: 1fr;
+    }
+
+    body.lock{
+        overflow:hidden ;
+    }
+
+    .menu__burger{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        
+    }
+
+    .logo,.menu__burger{
+        margin: 0 1rem;
+    }
+
+    .menu__burger span{
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        height: 2px;
+        left: 0; 
+        top: 9px;
+    }
+
+    .menu__burger:before,
+    .menu__burger:after{
+        content: '';
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: .3s;
+    }
+    .menu__burger:before{
+        top: 0;
+    }
+
+    .menu__burger:after{
+        bottom: 0;
+    }
+
+    .menu__burger.active span{
+        width: 0%;
+    }
+    
+    .menu__burger.active:before{
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .menu__burger.active:after{
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+
+    .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #F2F8FC;;
+        display: none;
+        margin-top: 80px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .menu.active{
+        display: flex;
+    }
+    .icons{
+        display: none;
+    }
+    .blog{
+        
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+ }
+
+
+@media (min-width: 768px) { 
+    .avone{
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+    .avone div:nth-child(1){
+        grid-area: 2 / 1 / 13 / 7;
+    }
+    
+    .avone div:nth-child(2){
+        grid-area: 1 / 7 / 9 / 12;
+    }
+    
+    .avone div:nth-child(3){
+        grid-area: 8 / 10 / 13 / 13;
+    }   
+ }
+
+
+@media (min-width: 992px) { 
+
+}
+
+
+@media (max-width: 1200px) { 
+    
+ }
